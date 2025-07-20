@@ -1,0 +1,2 @@
+#!/bin/zsh
+export PATH="C:\Users\rahma\AppData\Local\Programs\PhpWebStudy-Data\app\php-8.4.10:$PATH" #FlyEnv-ID-RCgu7YyuDGgdex7D5dtELgQBFBHnXwfD
