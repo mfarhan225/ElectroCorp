@@ -286,6 +286,10 @@
                                 <input class="w-full px-3 py-2 border rounded-md" id="contact-email" type="email" placeholder="email@contoh.com">
                             </div>
                             <div>
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="contact-email">Nomor Telepon</label>
+                                <input class="w-full px-3 py-2 border rounded-md" id="contact-email" type="email" placeholder="08....">
+                            </div>
+                            <div>
                                 <label class="block text-gray-700 text-sm font-bold mb-2" for="contact-message">Pesan</label>
                                 <textarea class="w-full px-3 py-2 border rounded-md" id="contact-message" rows="4" placeholder="Tulis pesan Anda"></textarea>
                             </div>
