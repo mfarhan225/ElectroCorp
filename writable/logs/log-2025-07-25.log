@@ -120,3 +120,39 @@ in APPPATH/Views/templates/header.php on line 7.
  9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-25 19:20:34 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "about_view.php"
+[Method: GET, Route: about]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('about_view.php')
+ 2 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('about_view', [], true)
+ 3 APPPATH/Controllers/About.php(24): view('about_view', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\About->index()
+ 5 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\About))
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-25 19:23:46 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "about_view.php"
+[Method: GET, Route: about]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('about_view.php')
+ 2 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('about_view', [], true)
+ 3 APPPATH/Controllers/About.php(24): view('about_view', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\About->index()
+ 5 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\About))
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-25 19:25:34 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "about_view.php"
+[Method: GET, Route: about]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('about_view.php')
+ 2 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('about_view', [], true)
+ 3 APPPATH/Controllers/About.php(24): view('about_view', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\About->index()
+ 5 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\About))
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
