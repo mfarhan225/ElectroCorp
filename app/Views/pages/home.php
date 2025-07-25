@@ -10,7 +10,8 @@
                 <p class="text-lg md:text-xl text-slate-400 mb-8 max-w-2xl">
                     Kami merancang dan membangun perangkat elektronik canggih yang mengintegrasikan keindahan desain dengan performa tak tertandingi untuk kehidupan Anda.
                 </p>
-                <a href="#products" class="px-8 py-4 accent-bg text-slate-900 font-bold rounded-md hover:bg-cyan-300 transition-all duration-300 transform hover:-translate-y-1 inline-block">
+                <!-- Tautan ini diubah -->
+                <a href="<?= base_url('products'); ?>" class="px-8 py-4 accent-bg text-slate-900 font-bold rounded-md hover:bg-cyan-300 transition-all duration-300 transform hover:-translate-y-1 inline-block">
                     Jelajahi Produk Kami
                 </a>
             </div>
@@ -19,6 +20,7 @@
 
     <!-- About Us Section -->
     <section id="about" class="py-20 md:py-32 fade-in-section">
+        <!-- ... konten tentang kami tidak berubah ... -->
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
@@ -57,34 +59,35 @@
                 </p>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Product Card 1 -->
-                <div class="glass-card rounded-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300">
-                    <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?q=80&w=600&h=400&auto=format&fit=crop" alt="[Gambar SmartWatch X1]" class="w-full h-56 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-slate-100 mb-2">SmartWatch X1</h3>
-                        <p class="text-slate-400 text-sm mb-4">Jam tangan pintar dengan pelacakan kebugaran canggih dan desain premium.</p>
-                        <a href="#" class="text-sm font-semibold accent-color group-hover:underline">Lihat Detail <i data-feather="arrow-right" class="inline w-4 h-4"></i></a>
-                    </div>
-                </div>
-                <!-- Product Card 2 -->
-                <div class="glass-card rounded-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300">
-                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=600&h=400&auto=format&fit=crop" alt="[Gambar AudioSphere Pro]" class="w-full h-56 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-slate-100 mb-2">AudioSphere Pro</h3>
-                        <p class="text-slate-400 text-sm mb-4">Headphone nirkabel dengan peredam bising aktif dan kualitas suara studio.</p>
-                        <a href="#" class="text-sm font-semibold accent-color group-hover:underline">Lihat Detail <i data-feather="arrow-right" class="inline w-4 h-4"></i></a>
-                    </div>
-                </div>
-                <!-- Product Card 3 -->
-                <div class="glass-card rounded-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300">
-                    <img src="https://images.unsplash.com/photo-1561154464-82e9adf32764?q=80&w=600&h=400&auto=format&fit=crop" alt="[Gambar CyberTablet Z]" class="w-full h-56 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-slate-100 mb-2">CyberTablet Z</h3>
-                        <p class="text-slate-400 text-sm mb-4">Tablet ultra-tipis dengan layar resolusi tinggi untuk produktivitas dan hiburan.</p>
-                        <a href="#" class="text-sm font-semibold accent-color group-hover:underline">Lihat Detail <i data-feather="arrow-right" class="inline w-4 h-4"></i></a>
-                    </div>
-                </div>
+                <?php if (!empty($products) && is_array($products)): ?>
+                    <?php foreach ($products as $product): ?>
+                        <!-- Product Card -->
+                        <div class="glass-card rounded-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
+                            <img src="<?= esc($product['image']); ?>" alt="[Gambar <?= esc($product['name']); ?>]" class="w-full h-56 object-cover">
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-xl font-bold text-slate-100 mb-2"><?= esc($product['name']); ?></h3>
+                                <p class="text-slate-400 text-sm mb-4 flex-grow"><?= esc($product['short_desc']); ?></p>
+                                <!-- Tautan ini diubah -->
+                                <a href="<?= base_url('products/' . esc($product['slug'])); ?>" class="text-sm font-semibold accent-color group-hover:underline self-start">
+                                    Lihat Detail <i data-feather="arrow-right" class="inline w-4 h-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                <?php endif; ?>
             </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section (Placeholder) -->
+    <section id="contact" class="py-20 md:py-32 fade-in-section">
+        <div class="container mx-auto px-6 text-center">
+             <h2 class="text-3xl md:text-4xl font-bold text-slate-100">
+                Hubungi <span class="accent-color">Kami</span>
+            </h2>
+            <p class="text-slate-400 mt-4 max-w-2xl mx-auto">
+                Punya pertanyaan? Kami siap membantu.
+            </p>
         </div>
     </section>
 </main>

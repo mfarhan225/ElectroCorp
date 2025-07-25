@@ -8,11 +8,11 @@
             </a>
             
             <!-- Navigasi Desktop -->
-            <nav class="hidden md:flex items-center space-x-8">
-                <a href="#hero" class="hover:accent-color transition-colors duration-300">Beranda</a>
-                <a href="#about" class="hover:accent-color transition-colors duration-300">Tentang Kami</a>
-                <a href="#products" class="hover:accent-color transition-colors duration-300">Produk</a>
-                <a href="#contact" class="hover:accent-color transition-colors duration-300">Kontak</a>
+            <nav class="hidden md:flex items-center space-x-8 text-slate-300">
+                <a href="<?= base_url(); ?>" class="hover:accent-color transition-colors duration-300">Beranda</a>
+                <a href="<?= base_url(); ?>#about" class="hover:accent-color transition-colors duration-300">Tentang Kami</a>
+                <a href="<?= base_url('products'); ?>" class="hover:accent-color transition-colors duration-300">Produk</a>
+                <a href="<?= base_url(); ?>#contact" class="hover:accent-color transition-colors duration-300">Kontak</a>
             </nav>
 
             <!-- Tombol CTA Desktop -->
@@ -28,11 +28,12 @@
     </div>
     <!-- Navigasi Mobile -->
     <div id="mobile-menu" class="hidden md:hidden">
-        <nav class="px-6 pt-2 pb-4 flex flex-col space-y-3">
-            <a href="#hero" class="block hover:accent-color transition-colors duration-300">Beranda</a>
-            <a href="#about" class="block hover:accent-color transition-colors duration-300">Tentang Kami</a>
-            <a href="#products" class="block hover:accent-color transition-colors duration-300">Produk</a>
-            <a href="#contact" class="block hover:accent-color transition-colors duration-300">Kontak</a>
+        <nav class="px-6 pt-2 pb-4 flex flex-col space-y-3 text-slate-300">
+            <a href="<?= base_url(); ?>" class="block hover:accent-color transition-colors duration-300">Beranda</a>
+            <a href="<?= base_url(); ?>#about" class="block hover:accent-color transition-colors duration-300">Tentang Kami</a>
+            <!-- Tautan ini diubah -->
+            <a href="<?= base_url('products'); ?>" class="block hover:accent-color transition-colors duration-300">Produk</a>
+            <a href="<?= base_url(); ?>#contact" class="block hover:accent-color transition-colors duration-300">Kontak</a>
             <a href="#contact" class="mt-2 block w-full text-center px-5 py-2 border accent-border rounded-md text-sm font-medium accent-color hover:bg-cyan-400/10 transition-colors duration-300">
                 Hubungi Kami
             </a>
