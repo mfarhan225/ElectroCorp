@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: company-app
+    ports:
+      - "8888:80"   # Mengganti port ke 8888
+    volumes:
+      - .:/var/www/html
+    networks:
+      - company-network
+
+networks:
+  company-network:
+    driver: bridge
