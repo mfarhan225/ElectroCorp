@@ -92,7 +92,7 @@
         <a href="<?= base_url('/') ?>" class="text-gray-700 hover:text-orange-500 font-medium">Beranda</a>
         <a href="<?= base_url('/#about') ?>" class="text-gray-700 hover:text-orange-500 font-medium">Tentang Kami</a>
         <a href="<?= base_url('/product') ?>" class="text-gray-700 hover:text-orange-500 font-medium">Produk</a>
-        <a href="<?= base_url('/#contact') ?>" class="text-gray-700 hover:text-orange-500 font-medium">Kontak</a>
+        <a href="<?= base_url('/contact') ?>" class="text-gray-700 hover:text-orange-500 font-medium">Kontak</a>
       </div>
     </div>
 
