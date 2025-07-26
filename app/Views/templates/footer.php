@@ -1,79 +1,78 @@
-<!-- Footer -->
-<footer>
-    <div class="border-t border-gray-800 pt-6">
-        <div class="flex flex-col md:flex-row justify-between items-center py-4">
-            <div class="mb-4 md:mb-0">
-                <p class="text-gray-400 text-sm">© <span id="year">2023</span> ElectroCorp. Hak cipta dilindungi undang-undang.</p>
+<footer class="lg-bg-dark text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="font-bold text-lg mb-4">ElectroCorp</h3>
+                    <p class="text-gray-400">Inovasi teknologi untuk masa depan yang lebih cerah.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Produk</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Smartphone</a></li>
+                        <li><a href="#" class="hover:text-white">Laptop</a></li>
+                        <li><a href="#" class="hover:text-white">Wearables</a></li>
+                        <li><a href="#" class="hover:text-white">Aksesoris</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Dukungan</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Pusat Bantuan</a></li>
+                        <li><a href="#" class="hover:text-white">Garansi</a></li>
+                        <li><a href="#" class="hover:text-white">Pengiriman</a></li>
+                        <li><a href="#" class="hover:text-white">Pembayaran</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Perusahaan</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#about" class="hover:text-white">Tentang Kami</a></li>
+                        <li><a href="#" class="hover:text-white">Karir</a></li>
+                        <li><a href="#" class="hover:text-white">Blog</a></li>
+                        <li><a href="#contact" class="hover:text-white">Kontak</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="flex space-x-4">
-                <a href="#" class="text-gray-400 hover:text-white text-sm" aria-label="Ketentuan Layanan">Ketentuan Layanan</a>
-                <a href="#" class="text-gray-400 hover:text-white text-sm" aria-label="Kebijakan Privasi">Kebijakan Privasi</a>
-                <a href="#" class="text-gray-400 hover:text-white text-sm" aria-label="Peta Situs">Peta Situs</a>
-            </div>
-        </div>
-    </div>
-</footer>
-
-<!-- Link ke file JavaScript di direktori public -->
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    // Hapus jika tidak ada ikon Feather yang digunakan
-    feather.replace();  
-
-    // Logika untuk Mobile Menu
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-    if (mobileMenuButton && mobileMenu) {
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+ 
+    <script>
+        // Intersection Observer for fade-in animations
+        const fadeInSections = document.querySelectorAll('.fade-in-section');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        fadeInSections.forEach(section => {
+            observer.observe(section);
         });
-
-        // Menutup menu mobile saat link di-klik
-        document.querySelector('#mobile-menu').addEventListener('click', (e) => {
-            if (e.target.tagName === 'A') {
-                mobileMenu.classList.add('hidden');
-            }
+        
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
         });
-
-        // Menutup menu mobile jika klik di luar menu
-        document.addEventListener('click', function (e) {
-            if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
-                mobileMenu.classList.add('hidden');
-            }
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
         });
-    }
-
-    // Efek shadow pada header saat scroll
-    const header = document.getElementById('header');
-    if (header) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.classList.add('shadow-lg');
-            } else {
-                header.classList.remove('shadow-lg');
-            }
-        });
-    }
-
-    // Animasi fade-in saat elemen masuk viewport
-    const sections = document.querySelectorAll('.fade-in-section');
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
-            }
-        });
-    }, {
-        threshold: 0.1
-    });
-
-    sections.forEach(section => {
-        observer.observe(section);
-    });
-
-    // Set tahun di footer secara dinamis
-    document.getElementById('year').textContent = new Date().getFullYear();
-});
-</script>
+    </script>
 </body>
 </html>
