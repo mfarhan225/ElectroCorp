@@ -1,192 +1,108 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <meta name="description" content="Hubungi kami untuk informasi lebih lanjut atau bantuan. Kami siap membantu Anda dengan berbagai kebutuhan.">
-    <meta name="keywords" content="hubungi kami, customer service, produk, layanan">
-    <meta property="og:title" content="Hubungi Kami">
-    <meta property="og:description" content="Hubungi kami untuk pertanyaan atau bantuan lebih lanjut.">
-    <meta property="og:image" content="https://link-to-image.jpg">
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="Your Company Name">
-    <title>Hubungi Kami</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<main class="bg-gray-50 py-12 md:py-16">
+    <div class="container mx-auto px-4 md:px-6">
 
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f4f7f6;
-            color: #333;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 800px;
-            width: 100%;
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        h1, h2, h3 {
-            text-align: center;
-        }
-        h1 {
-            color: #2c3e50;
-        }
-        h2, h3, .highlight-text {
-            color: #ff6600ff;
-        }
-
-        h1 { font-size: 2.5em; margin-bottom: 20px; }
-        h2 { font-size: 1.8em; border-bottom: 3px solid #ff6600ff; padding-bottom: 10px; margin-top: 30px; margin-bottom: 20px; }
-        h3 { font-size: 1.5em; margin-bottom: 15px; }
-
-        .text-tengah { text-align: center; }
-
-        .contact-form-section, .operating-hours {
-            background-color: #ecf0f1;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-        
-        form { display: flex; flex-direction: column; gap: 15px; margin-top: 20px; }
-        form input, form textarea { font-size: 1em; width: 100%; padding: 15px; border: 1px solid #bdc3c7; border-radius: 5px; box-sizing: border-box; }
-        form button { padding: 15px; background-color: #ff6600ff; color: white; border: none; border-radius: 5px; font-size: 1.1em; font-weight: bold; cursor: pointer; }
-        form button:hover { background-color: #e65c00; transition: background-color 0.3s ease; }
-        
-        .operating-hours p { font-size: 1.1em; text-align: center; margin: 10px 0;}
-        
-        .additional-info {
-            margin-top: 30px; padding: 20px; background-color: #eaf6ff; border-left: 5px solid #3498db; border-radius: 8px;
-        }
-
-        .social-media-section {
-            text-align: center;
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #e0e0e0;
-        }
-
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .social-icon {
-            font-size: 1.8em;
-            color: #34495e;
-            transition: transform 0.3s, color 0.3s;
-        }
-
-        .social-icon:hover {
-            transform: scale(1.2);
-        }
-        .social-icon.facebook:hover   { color: #1877F2; }
-        .social-icon.instagram:hover { color: #E4405F; }
-        .social-icon.twitter:hover   { color: #1DA1F2; }
-        .social-icon.discord:hover   { color: #5865F2; }
-
-    </style>
-</head>
-<body>
-
-    <div class="container">
-        <h1>Hubungi <span class="highlight-text">Kami</span></h1>
-        <p class="text-tengah">Punya pertanyaan? Kami siap membantu.</p>
-
-        <div class="contact-form-section">
-            <h2>Kirim Pesan</h2>
-            <form id="contactForm">
-                <label for="nama">Nama Anda</label>
-                <input type="text" id="nama" name="nama" placeholder="Nama Anda" required aria-label="Nama Anda">
-                
-                <label for="email">Email Anda</label>
-                <input type="email" id="email" name="email" placeholder="contoh@domain.com" required aria-label="Email Anda">
-                
-                <label for="telepon">Nomor Telepon Anda</label>
-                <input type="tel" id="telepon" name="telepon" placeholder="+62 812 3456 7890" required aria-label="Nomor Telepon Anda">
-                
-                <label for="pesan">Pesan Anda</label>
-                <textarea id="pesan" name="pesan" rows="6" placeholder="Tulis Pesan Anda" required></textarea>
-                
-                <button type="submit">KIRIM PESAN</button>
-            </form>
+        <!-- Header Halaman dan Breadcrumb -->
+        <div class="text-center mb-12">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-800">
+                Hubungi <span class="lg-text-orange">Kami</span>
+            </h1>
+            <p class="text-gray-600 mt-2 max-w-2xl mx-auto">
+                Punya pertanyaan atau butuh bantuan? Kami siap melayani Anda.
+            </p>
+            <nav class="text-sm font-medium text-gray-500 mt-4 inline-block" aria-label="Breadcrumb">
+                <ol class="list-none p-0 inline-flex">
+                    <li class="flex items-center">
+                        <a href="<?= base_url('/') ?>" class="hover:text-orange-500">Beranda</a>
+                        <i data-feather="chevron-right" class="w-4 h-4 mx-2"></i>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-gray-700">Kontak</span>
+                    </li>
+                </ol>
+            </nav>
         </div>
 
-        <div class="operating-hours">
-            <h2>Jam Oprasional</h2>
-            <p><strong>Senin - Jumat:</strong> 08:00 - 17:00</p>
-            <p><strong>Sabtu:</strong> 09:00 - 15:00</p>
-        </div>
+        <!-- Konten Kontak: Info dan Form -->
+        <div class="max-w-5xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+            <div class="grid md:grid-cols-2 gap-10">
 
-        <div class="additional-info">
-            <p class="info-text">Untuk pertanyaan seputaran produk dan penjualan, jangan ragu untuk langsung menghubungi marketing kami:</p>
-            <div class="contact-item">
-                <i class="fa-solid fa-map-marker-alt"></i>
-                <span>Jl. Teknologi No. 42, Jakarta Selatan, Indonesia</span>
-            </div>
-            <div class="contact-item">
-                <i class="fa-solid fa-envelope"></i>
-                <a href="mailto:info@electrocorp.com">info@electrocorp.com</a>
-            </div>
-            <div class="contact-item">
-                <i class="fa-brands fa-whatsapp"></i>
-                <a href="https://wa.me/+62 21 1234 5678" target="_blank">+62 21 1234 5678</a>
+                <!-- Kolom Informasi Kontak -->
+                <div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Informasi Kontak</h3>
+                    <ul class="space-y-4 text-gray-700">
+                        <li class="flex items-start">
+                            <i data-feather="map-pin" class="lg-text-orange mt-1 mr-4 flex-shrink-0"></i>
+                            <div>
+                                <h4 class="font-semibold">Alamat Kantor</h4>
+                                <span>Jl. Teknologi No. 42, Jakarta Selatan, Indonesia</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="phone" class="lg-text-orange mt-1 mr-4 flex-shrink-0"></i>
+                            <div>
+                                <h4 class="font-semibold">Telepon</h4>
+                                <span>+62 21 1234 5678</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="mail" class="lg-text-orange mt-1 mr-4 flex-shrink-0"></i>
+                            <div>
+                                <h4 class="font-semibold">Email</h4>
+                                <span>info@electrocorp.com</span>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <div class="mt-8 pt-6 border-t">
+                        <h3 class="text-lg font-bold text-gray-800 mb-3">Jam Operasional</h3>
+                        <p class="text-gray-700"><strong>Senin - Jumat:</strong> 08:00 - 17:00</p>
+                        <p class="text-gray-700"><strong>Sabtu:</strong> 09:00 - 15:00</p>
+                    </div>
+                </div>
+
+                <!-- Kolom Form Kontak -->
+                <div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Kirim Pesan</h3>
+                    <form action="#" method="POST" class="space-y-4">
+                        <div>
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="contact-name">Nama Lengkap</label>
+                            <input class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500" id="contact-name" type="text" placeholder="Nama Anda">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="contact-email">Alamat Email</label>
+                            <input class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500" id="contact-email" type="email" placeholder="email@contoh.com">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="contact-message">Pesan Anda</label>
+                            <textarea class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500" id="contact-message" rows="5" placeholder="Tulis pesan Anda di sini..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full lg-bg-orange text-white py-3 px-4 rounded-md font-bold hover:bg-orange-700 transition transform hover:scale-105">
+                            KIRIM PESAN
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
 
-        <div class="social-media-section">
-            <h3>Ikuti Kami</h3>
-            <div class="social-icons">
-                <a href="https://www.facebook.com/?locale=id_ID" target="_blank" class="social-icon facebook" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://www.instagram.com/" target="_blank" class="social-icon instagram" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://x.com/" target="_blank" class="social-icon twitter" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
-                <a href="https://discord.com/" target="_blank" class="social-icon discord" title="Discord"><i class="fa-brands fa-discord"></i></a>
+        <!-- Social Media Section -->
+        <div class="text-center mt-16">
+            <h3 class="text-2xl font-bold lg-text-orange mb-4">Ikuti Kami</h3>
+            <div class="flex justify-center">
+                <!-- Pastikan Anda sudah memuat Font Awesome agar ikon muncul -->
+                <a href="#" class="text-gray-500 hover:text-blue-600 transition duration-300 mx-6">
+                    <i class="fab fa-facebook-f fa-2x"></i>
+                </a>
+                <a href="#" class="text-gray-500 hover:text-pink-500 transition duration-300 mx-6">
+                    <i class="fab fa-instagram fa-2x"></i>
+                </a>
+                <a href="#" class="text-gray-500 hover:text-sky-500 transition duration-300 mx-6">
+                    <i class="fab fa-twitter fa-2x"></i>
+                </a>
+                <a href="#" class="text-gray-500 hover:text-indigo-600 transition duration-300 mx-6">
+                    <i class="fab fa-discord fa-2x"></i>
+                </a>
             </div>
         </div>
+
     </div>
-
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const nama = document.getElementById('nama').value;
-            const email = document.getElementById('email').value;
-            const telepon = document.getElementById('telepon').value;
-            
-            if (!nama || !email || !telepon) {
-                alert("Semua kolom harus diisi!");
-                return;
-            }
-            
-            // Validasi Email
-            const emailPattern = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
-            if (!email.match(emailPattern)) {
-                alert("Email tidak valid!");
-                return;
-            }
-            
-            // Validasi Nomor Telepon
-            const telPattern = /^(\+62|62)8[1-9][0-9]{7,10}$/;
-            if (!telepon.match(telPattern)) {
-                alert("Nomor telepon tidak valid!");
-                return;
-            }
-            
-            alert(`Terima kasih, ${nama}! Pesan Anda telah berhasil dikirim.`);
-            document.getElementById('contactForm').reset();
-        });
-    </script>
-
-</body>
-</html>
+</main>
